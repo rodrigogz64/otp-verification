@@ -70,6 +70,8 @@ src/
 - **Hooks custom (`useOtp`, `useOtpFromUrl`)**: separan la lógica de negocio de la presentación, facilitando el testing y la reutilización.
 - **TailwindCSS v4**: ofrece utilidades suficientes para una UI clara sin necesidad de crear archivos CSS adicionales.
 - **React Router**: permite leer los query params (`?otp=XXXX`) con `useSearchParams` de forma declarativa y estándar.
+- **Constantes centralizadas (`OTP_LENGTH`, `OTP_PATTERN`)**: definidas en un solo archivo para evitar magic numbers dispersos. Si el OTP cambia a 6 dígitos, se modifica un único lugar.
+- **Vitest + React Testing Library**: Vitest se integra nativamente con Vite (misma configuración, mismos plugins), eliminando la necesidad de configurar Jest por separado. React Testing Library refuerza tests basados en cómo el usuario interactúa con la UI (roles, texto visible) en lugar de detalles de implementación, lo que hace las pruebas más estables ante cambios internos del código.
 
 ## Supuestos
 
